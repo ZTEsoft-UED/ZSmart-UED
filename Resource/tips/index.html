@@ -1,0 +1,326 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>TIPS插件</title>
+<link rel="stylesheet" href="hai_tips.css"> 
+
+<style type="text/css">
+ body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {  
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+    padding:0;
+    margin: 0;
+    text-align: center;
+    color: #777777;
+    font-family: 微软雅黑;
+    list-style: none outside none;
+}
+
+
+body {
+	background-color:  #448EF3; 
+	color: #0046AD;
+	font-family: 微软雅黑, arial, sans-serif;
+	font-size: 14px
+}
+
+#wrap {
+	margin: 0 auto;
+	width: 1000px;
+	background: #FFF;
+}
+
+.p20 {
+	padding: 20px
+}  
+.h {
+	background: #fff4d6;
+	text-align: center;
+	padding: 5px 0;
+	margin-bottom: 20px;
+}
+
+.tr {
+	text-align: center;
+	margin:10px;
+} 
+
+#wrap .desc {
+	padding: 5px;
+	opacity: 0.6;
+}
+
+pre {
+	border-radius: 3px;
+	border: 1px solid #CCC;
+	background: #F5F5F5;
+	font-family: verdana;
+	text-align:left;
+	display:none;
+}
+
+.tb {
+	border-collapse: collapse;
+	border: 1px solid #CCCCCC;
+	width: 100%; 
+}
+
+.tb td {
+	border: 1px solid #CCC;
+}
+
+a {
+	text-decoration: none;
+}
+.hleft{
+float:left;
+background: #fff4d6;
+}
+.demo{
+margin: 30px;
+}
+
+</style>
+
+</head>
+<body>
+	<div id="wrap">
+		<div class="p20">
+		<div class="header">
+            <ul> 
+                <li>TIPS插件,用于操作信息提醒。具体调用方式，请查看API。</li>
+            </ul>
+             
+        </div> 
+			<div class="main">
+				<h3 class="h">示例演示</h3>
+
+				<div class="demo">
+					<h4>1.简单demo</h4>
+					<p class="tr">
+						<input type="button" id='tips1' class="g-button " value="点我测试">
+					  <input type="button"   class="g-button view" value="调用方式">
+					</p>
+				    <pre class="x4">	
+								$('#tips1').click(function() {
+									$.hai_tips({
+										title : '温馨提醒',
+										show: true, 
+										content : ' 团队将致力将用户体验做到极致！ '
+								       });
+							        }); 
+			        </pre>
+				</div>
+
+				<div class="demo">
+					<h4>2.传入页面data</h4>
+					<p class="tr">
+					
+						<input type="button" id='tips2' class="g-button  " value="点我测试">
+						  <input type="button"   class="g-button view" value="调用方式">
+							<div id="data" style="display: none">  团队将致力将用户体验做到极致！</div>
+					</p>
+				   <pre class="x4">	
+								$('#tips2').click(function() {
+										$.hai_tips({ 
+											content : document.getElementById('data'),
+											opacity : false
+										});
+									});
+			        </pre>
+				</div>
+				<div class="demo">
+					<h4>3.手动设置高度宽度</h4>
+					<p class="tr">
+						<input type="button" id='tips3' class="g-button  " value="点我测试">
+						  <input type="button"   class="g-button view" value="调用方式">
+					</p>
+				    <pre class="x4">	
+							$('#tips3').click(function() {
+										$.hai_tips({
+											title : '温馨提醒',
+											content : ' 团队将致力于把租车用户体验做到极致',
+											width : 600,
+											height : 100
+										});
+									});
+			        </pre>
+				</div>
+				<div class="demo">
+					<h4>4.有 确定  取消 按钮</h4>
+					<p class="tr">
+						<input type="button" id='tips4' class="g-button  " value="点我测试">
+						  <input type="button"   class="g-button view" value="调用方式">
+					</p>
+				    <pre class="x4">	 
+							$('#tips4').click(function() {
+										$.hai_tips({
+											title : '温馨提醒',
+											content : ' 团队将致力于把租车用户体验做到极致',
+											ok : function() {
+												alert("你点了确认");
+											},
+											cancel : function() {
+												alert("你点了取消");
+											}
+										});
+									});
+			        </pre>
+				</div>
+				<div class="demo">
+					<h4>5.提示信息框,3秒后关闭</h4>
+					<p class="tr">
+						<input type="button" id='tips5' class="g-button  " value="点我测试">
+						  <input type="button"   class="g-button view" value="调用方式">
+					</p>
+				    <pre class="x4">	
+								
+						$('#tips5').click(function() {
+									$.hai_tips({
+										content : ' 团队将致力将用户体验做到极致！',
+										type : 'tips'
+									});
+								}); 
+			        </pre>
+				</div>
+				<div style="height:250px;">
+				 
+				</div> 
+				
+				<h3 class="h">TIPS API</h3>
+				<table border=1 cellpadding=5 cellspacing=0 class="tb">
+					<tr style="background: none repeat scroll 0 0 #FF9E40;  border-left: 2px solid #FFFFFF;   border-right: 2px solid #FFFFFF;">
+						<td>名称</td>
+						<td>类型</td>
+						<td width="10%">默认值</td>
+						<td>描述</td>
+					</tr>
+					<tr>
+						<td>title</td>
+						<td>String</td>
+						<td>"温馨提醒"</td>
+						<td>标题的内容</td>
+					</tr>
+					<tr>
+						<td>width</td>
+						<td>Number</td>
+						<td>auto</td>
+						<td >设置消息内容的宽度。一般不用设置，自适应。</td>
+					</tr>
+					<tr>
+						<td>height</td>
+						<td>Number</td>
+						<td>auto</td>
+						<td>设置消息内容的高度，一般不用设置，自适应。</td>
+					</tr>
+					<tr>
+						<td>opacity</td>
+						<td>Number</td>
+						<td>0.75</td>
+						<td>遮罩层的透明度，false为不显示遮罩</td>
+					</tr>
+					<tr>
+						<td>show</td>
+						<td>Boolean</td>
+						<td>true</td>
+						<td>是否显示弹出层</td>
+					</tr> 
+					<tr>
+						<td>content</td>
+						<td>String/HTMLElement</td>
+						<td>null</td>
+						<td>如果传入的是HTMLElement类型，缓存在页面的数据，方可显示。</td>
+					</tr>
+					<tr>
+						<td>overlayClose</td>
+						<td>Boolean</td>
+						<td>true</td>
+						<td>点击遮罩层是否可以关闭</td>
+					</tr>
+					<tr>
+						<td>overlayColor</td>
+						<td>String</td>
+						<td>#4F4F4F</td>
+						<td>遮罩层的颜色</td>
+					</tr> 
+					<tr>
+						<td>type</td>
+						<td>String</td>
+						<td>null</td>
+						<td>消息类型：tips</td>
+					</tr>
+					<tr>
+						<td>ok</td>
+						<td>function</td>
+						<td>null</td>
+						<td>确定按钮回调函数，函数如果返回false将阻止弹出层关闭</td>
+					</tr>
+					<tr>
+						<td>cancel</td>
+						<td>function/Boolean</td>
+						<td>true</td>
+						<td>取消按钮回调函数，如果为true，调用默认关闭事件，函数如果返回false将阻止弹出层关闭</td>
+					</tr>
+					<tr>
+						<td>time</td>
+						<td>Number</td>
+						<td>true</td>
+						<td>多少秒后关闭弹出层</td>
+					</tr>
+				</table> 
+				
+			</div> 
+		</div>
+	</div> 
+	<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="haiTips.js" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+	$(function(){
+		$(".view").on("click",function(){ 
+		 $(this).parents("div").eq(0).find("pre").slideToggle(); 
+		})
+	})
+		$('#tips1').click(function() {
+			$.hai_tips({
+				title : '温馨提醒',
+				show: true, 
+				content : '  团队将致力将用户体验做到极致！'
+			});
+		});
+		$('#tips2').click(function() {
+			$.hai_tips({
+				content : document.getElementById('data'),
+				opacity : false
+			});
+		});
+		$('#tips3').click(function() {
+			$.hai_tips({
+				title : '温馨提醒',
+				content : '  团队将致力将用户体验做到极致！',
+				width : 600,
+				height : 100
+			});
+		});
+		$('#tips4').click(function() {
+			$.hai_tips({
+				title : '温馨提醒',
+				content : ' 团队将致力将用户体验做到极致！',
+				ok : function() {
+					alert("你点了确认");
+				},
+				cancel : function() {
+					alert("你点了取消");
+				}
+			});
+		});
+		$('#tips5').click(function() {
+			$.hai_tips({
+				content : '  团队将致力将用户体验做到极致！',
+				type : 'tips'
+			});
+		}); 
+	</script>
+</body>
+</html>

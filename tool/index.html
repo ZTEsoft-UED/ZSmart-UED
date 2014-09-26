@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>前端开发工具集</title>
+    <link rel="stylesheet"   href="css/style.css" media="all">
+    <script src="js/globals.js"></script>
+    <script src="js/base.js" t ></script>
+    <script src="js/jsformat.js"  ></script>
+    <script src="js/htmlformat.js"></script>
+</head>
+<body> 
+<!--主体开始-->
+<div id="page" class="hfeed site">  
+        <div class="box">
+          <div id="b_1"> 
+            <h1 style="color:#208FD7"> 前端开发工具集[JavaScript / HTML/ CSS：美化、优化、加密、解密、压缩、解压 ] </h1> 
+            <div class="box1"> 
+                <a href="../index.html" class="g-back">回首页</a>
+              <div class="contents">
+                <textarea id="content" name="content" style="border:1px solid #208FD7;" >/*此处CSS代码格式化演示用*/
+                @charset "utf-8";
+                
+                /* Effect : Reverse slide out */
+                .st-effect-5.st-menu-open .st-pusher {
+                    -webkit-transform: translate3d(300px, 0, 0);
+                    transform: translate3d(300px, 0, 0);
+                }
+                
+                .st-effect-5.st-menu {
+                    z-index: 1;	 transform: translate3d(50%, 0, 0);/*此处CSS代码格式化演示用*/
+                }
+                
+               .site-header h2 {
+                    font-weight: normal; 
+                    font-size: 13px;//设置字体大小
+                    font-size:1em;  
+                    color: #757575;
+                }
+                                 
+                </textarea>
+              </div>
+              <div >    
+                 
+                <input class="button modern" type="button" value="JS/html 美化" onClick="return do_js_beautify()" id="beautify" onFocus="this.blur()" title="对JS/html代码进行格式化"/>
+                <input class="button modern" type="button" value="JS/html 净化" onClick="pack_js(0)" onFocus="this.blur()" title="去掉JS/html中多余的空格和换行符"/>
+                <input class="button modern" type="button" value="JS 压 缩" onClick="pack_js(1)" onFocus="this.blur()" title="对JS代码进行编码,压缩代码体积,提高下载速度"/>
+                <input class="button" type="button" value="JS 解 压" onClick="Decode()" onFocus="this.blur()" title="对压缩/编码/加密过JS代码进行逆向格式化"/>
+                <input class="button" type="button" value="html转JS" onClick="change()" onFocus="this.blur()" />
+                <input class="button" type="button" value="JS转html" onClick="rechange()" onFocus="this.blur()" />
+                <input class="button" type="button" value="执行JS脚本" onClick="shell()" onFocus="this.blur()" />
+                <input class="button"   type="button" value="清空内容" onClick="Empty()" onFocus="this.blur()"/>
+                   <hr style="color:#47BFF3;height:1px;">
+                <input class="button" type="button" value="颜色值转颜色名" onClick="colorText(1)" onFocus="this.blur()" title="CSS颜色值转换成颜色名字"/>
+                <input class="button" type="button" value="颜色名转颜色值" onClick="colorText(0)" onFocus="this.blur()" style="font-size:12px" title="CSS颜色名字转换成颜色值"/>
+                <input class="button" type="button" value="CSS格式化" onClick="CSS('format')" onFocus="this.blur()" title="对CSS代码进行格式化"/>
+                <input class="button" type="button" value="CSS净化压缩"  onclick="CSS('pack')" onFocus="this.blur()" title="去掉CSS中多余的空格和换行符"/>
+                <input class="button" type="button" value="CSS净化分行" onClick="CSS('back')" onFocus="this.blur()" title="去掉CSS中多余空格,保留每条样式的换行符"/>
+                <input class="button" type="button" value="大写转小写" onClick="$('content').value=$('content').value.toLowerCase()" onFocus="this.blur()"/>
+                <input class="button" type="button" value="小写转大写" onClick="$('content').value=$('content').value.toUpperCase()" onFocus="this.blur()"/>
+             	<a class="button"  href="http://prefixmycss.com/"> CSS前缀补全</a> 
+                  <br style="margin:10px;"> 
+             
+                   <select name="tabsize" id="tabsize">
+                      <option value="1">制表符缩进</option>
+                      <option value="2">2个空格缩进</option>
+                      <option value="4" selected>4个空格缩进</option>
+                      <option value="8">8个空格缩进</option>
+                    </select>
+                
+                  <input type="radio" name="R1" value="V1" checked="true" onfocus='this.blur()'>
+                        <font style="font-size:9pt;cursor:default;font-family:宋体,Arial" onclick="this.previousSibling.click()" title="可对CSS里的16种颜色名和颜色值进行互换">W3C-十六色色盘</font>
+                <input type="radio" name="R1" value="V1" onfocus='this.blur()'>
+                        <font style='font-size:9pt;cursor:default;font-family:宋体,Arial' onclick='this.previousSibling.click()' title="可对CSS里的140种颜色名和颜色值进行互换">IE4+预命名颜色</font> 
+              
+               <span style="float:right; margin:15px 0;"> ZTEsoft</span>
+              </div>
+            </div>
+          </div>
+        </div> 
+      <script type="text/javascript">  setTimeout("GetFocus();", 10)</script> 
+</div>
+<!-- /主体 -->
+
+<script type="text/javascript">var chinazTopBarMenu = {
+    create: function(target, menucontents) {
+        if (!document.getElementById(menucontents)) {
+            return;
+        }
+        var contents_wrap = document.getElementById(menucontents);
+        var contents = contents_wrap.innerHTML;
+        target.className += " hover";
+        var dropdownmenu_wrap = document.createElement("div");
+        dropdownmenu_wrap.className = "dropdownmenu-wrap";
+        var dropdownmenu = document.createElement("div");
+        dropdownmenu.className = "dropdownmenu";
+        dropdownmenu.style.width = "auto";
+        var dropdownmenu_inner = document.createElement("div");
+        dropdownmenu_inner.className = "dropdownmenu-inner";
+        dropdownmenu_wrap.appendChild(dropdownmenu);
+        dropdownmenu.appendChild(dropdownmenu_inner);
+        dropdownmenu_inner.innerHTML = contents;
+        if (target.getElementsByTagName("div").length == 0) {
+            target.appendChild(dropdownmenu_wrap);
+        }
+    },
+    clear: function(target) {
+        target.className = target.className.replace(" hover", "");
+    }
+}
+</script>
+<script type="text/javascript">
+    function do_js_beautify() {
+        document.getElementById('beautify').disabled = true;
+        js_source = document.getElementById('content').value.replace(/^\s+/, '');
+        tabsize = document.getElementById('tabsize').value;
+        tabchar = ' ';
+        if (tabsize == 1) {
+            tabchar = '\t';
+        }
+        if (js_source && js_source.charAt(0) === '<') {
+            document.getElementById('content').value = style_html(js_source, tabsize, tabchar, 80);
+        } else {
+            document.getElementById('content').value = js_beautify(js_source, tabsize, tabchar);
+        }
+        document.getElementById('beautify').disabled = false;
+        return false;
+    }
+    function pack_js(base64) {
+        var input = document.getElementById('content').value;
+        var packer = new Packer;
+        if (base64) {
+            var output = packer.pack(input, 1, 0);
+        } else {
+            var output = packer.pack(input, 0, 0);
+        }
+        document.getElementById('content').value = output;
+    }
+    function Empty() {
+        document.getElementById('content').value = '';
+        document.getElementById('content').select();
+    }
+    function GetFocus() {
+        document.getElementById('content').focus();
+    }
+</script>
+<!-- 调用JS开始 -->
+
+
+<script language="javascript">
+
+function $(x) {
+    return document.getElementById(x)
+};
+//替换两边的空格
+String.prototype.trim = function() {
+    return this.replace(/(^\s+)|\s+$/g, "")
+};
+
+//JS解密解压缩
+function Decode() {
+    var code = $('content').value.trim();
+    if (code.indexOf('eval') == 0) {
+        $('content').value = eval(code.replace(/eval/, 'String'));
+        do_js_beautify(); //JS代码格式化
+    } else {
+        alert("没有找到需要解码的内容!");
+    }
+};
+//执行JS代码
+function shell() {
+    try {
+        eval($("content").value);
+    } catch(exception) {
+        alert(exception.description);
+    }
+}; 
+
+
+//Css代码压缩/解压缩格式化
+var CssFormat = {
+  back:function(s,x) {//按行净化压缩
+    s = this.format(s,x);
+    s = s.replace(/\/\*(.|\n)*?\*\/|\t/g, "");//删除注释和TAB制表符	
+    s = s.replace(/\s*([\{\}\(\)\:\;\,\=\-])\s*/g, "$1");//清除符号两边的空格
+    s = s.replace(/(url\(.*?\))([^\;\,\}])/ig, "$1 $2");//补上url()后面的空格
+    s = s.replace(/([\}])/g, "$1\n");//添加换行符
+    s = s.replace(/;\s*;/g, ";"); //清除连续分号
+    s = s.replace(/(@charset(.*?[^\s\n;];))/ig, "$1\n");//对@charset标签换行
+    s = s.replace(/(@fontdef(\s)url\(.*?\)(\s|);)/ig, "$1\n");//对@fontdef标签换行
+    return s.trim();
+  },
+  format:function(s,x) {//格式化代码
+    s = s.replace(/\s*([\{\}\(\)\:\;\,\=\-])\s*/g, "$1");//清除符号两边的空格
+    s = s.replace(/(@charset(.*?[^\s\n;];))/ig, "$1\n");//对@charset标签换行
+    s = s.replace(/(@fontdef(\s)url\(.*?\)(\s|);)/ig, "$1\n");//对@fontdef标签换行
+    s = s.replace(/;\s*;/g, ";"); //清除连续分号
+    s = s.replace(/\,[\s\.\#\d]*{/g, "{");
+    s = s.replace(/([^\s])\{([^\s])/g, "$1 {\n"+x+"$2");
+    s = s.replace(/([^\s])\}([^\n]*)/g, "$1\n}\n$2");
+    s = s.replace(/([^\s]);([^\s\}])/g, "$1;\n"+x+"$2");
+    s = s.replace(/\s*(\;|)\s*\}/g, ";\n}"); //补上尾部分号
+    s = s.replace(/(url\(.*?\))([^\;\,\}])/ig, "$1 $2");//补上url()后面的空格
+    s = s.replace(/([\:\,])([^\/])/ig, "$1 $2");//补上符号面后空格
+    s = s.replace(/(progid)\s*([\:])\s*/ig, "$1$2");//去掉IE滤镜progid:后的空格
+    return s;
+  },
+  pack:function(s){//压缩代码
+    s = s.replace(/\/\*(.|\n)*?\*\//g, ""); //删除注释
+    s = s.replace(/\s*([\{\}\(\)\:\;\,\=\-])\s*/g, "$1");//清除符号两边的空格
+    s = s.replace(/\,[\s\.\#\d]*\{/g, "{"); //容错处理
+    s = s.replace(/;\s*;/g, ";"); //清除连续分号
+    s = s.replace(/(url\(.*?\))([^\;\,\}])/ig, "$1 $2");//补上url()后面的空格
+    s = s.match(/^\s*(\S+(\s+\S+)*)\s*$/); //去掉首尾空白
+    return (s == null) ? "" : s[1];
+  }
+};
+function CSS(S){
+  var text="\t,  ,    ,        ";//缩进方式
+  var x=text.split(",")[$('tabsize').selectedIndex];
+  $("content").value = CssFormat[S]($("content").value,x);
+}
+</script>
+<script type="text/javascript">
+//HTML转JS
+function change(){
+  var data=$("content");
+  data.value="document.writeln(\""+data.value.replace(/\\/g,"\\\\").replace(/\//g,"\\/").replace(/\'/g,"\\\'").replace(/\"/g,"\\\"").split('\r\n').join("\");\ndocument.writeln(\"")+"\");"
+}
+//JS转HTML
+function rechange(){
+  var data=$("content");
+  data.value=data.value.replace(/(document.write|document.writeln)\("/g,"").replace(/"\)(;|)/g,"").replace(/\\\"/g,"\"").replace(/\\\'/g,"\"").replace(/\\\//g,"\/").replace(/\\\\/g,"\\");
+}
+function colorText(S) {
+    var W3C = new Array("Black:#000000", "White:#FFFFFF", "Red:#FF0000", "Yellow:#FFFF00", "Lime:#00FF00", "Aqua:#00FFFF", "Blue:#0000FF", "Fuchsia:#FF00FF", "Gray:#808080", "Silver:#C0C0C0", "Maroon:#800000", "Olive:#808000", "Green:#008000", "Teal:#008080", "Navy:#000080", "Purple:#800080", "Transparent:Transparent");
+    var IE4 = new Array("aliceblue:#F0F8FF", "antiquewhite:#FAEBD7", "aqua:#00FFFF", "aquamarine:#7FFFD4", "azure:#F0FFFF", "beige:#F5F5DC", "bisque:#FFE4C4", "black:#000000", "blanchedalmond:#FFEBCD", "blue:#0000FF", "blueviolet:#8A2BE2", "brown:#A52A2A", "burlywood:#DEB887", "cadetblue:#5F9EA0", "chartreuse:#7FFF00", "chocolate:#D2691E", "coral:#FF7F50", "cornflowerblue:#6495ED", "cornsilk:#FFF8DC", "crimson:#DC143C", "cyan:#00FFFF", "darkblue:#00008B", "darkcyan:#008B8B", "darkgoldenrod:#B8860B", "darkgray:#A9A9A9", "darkgreen:#006400", "darkkhaki:#BDB76B", "darkmagenta:#8B008B", "darkolivegreen:#556B2F", "darkorange:#FF8C00", "darkorchid:#9932CC", "darkred:#8B0000", "darksalmon:#E9967A", "darkseagreen:#8FBC8B", "darkslateblue:#483D8B", "darkslategray:#2F4F4F", "darkturquoise:#00CED1", "darkviolet:#9400D3", "deeppink:#FF1493", "deepskyblue:#00BFFF", "dimgray:#696969", "dodgerblue:#1E90FF", "firebrick:#B22222", "floralwhite:#FFFAF0", "forestgreen:#228B22", "Fuchsia:#FF00FF", "gainsboro:#DCDCDC", "ghostwhite:#F8F8FF", "gold:#FFD700", "goldenrod:#DAA520", "gray:#808080", "green:#008000", "greenyellow:#ADFF2F", "honeydew:#F0FFF0", "hotpink:#FF69B4", "indianred:#CD5C5C", "indigo:#4B0082", "ivory:#FFFFF0", "khaki:#F0E68C", "lavender:#E6E6FA", "lavenderblush:#FFF0F5", "lawngreen:#7CFC00", "lemonchiffon:#FFFACD", "lightblue:#ADD8E6", "lightcoral:#F08080", "lightcyan:#E0FFFF", "lightgoldenrodyellow:#FAFAD2", "lightgreen:#90EE90", "lightgrey:#D3D3D3", "lightpink:#FFB6C1", "lightsalmon:#FFA07A", "lightseagreen:#20B2AA", "lightskyblue:#87CEFA", "lightslategray:#778899", "lightsteelblue:#B0C4DE", "lightyellow:#FFFFE0", "lime:#00FF00", "limegreen:#32CD32", "linen:#FAF0E6", "magenta:#FF00FF", "maroon:#800000", "mediumaquamarine:#66CDAA", "mediumblue:#0000CD", "mediumorchid:#BA55D3", "mediumpurple:#9370DB", "mediumseagreen:#3CB371", "mediumslateblue:#7B68EE", "mediumspringgreen:#00FA9A", "mediumturquoise:#48D1CC", "mediumvioletred:#C71585", "midnightblue:#191970", "mintcream:#F5FFFA", "mistyrose:#FFE4E1", "moccasin:#FFE4B5", "navajowhite:#FFDEAD", "navy:#000080", "oldlace:#FDF5E6", "olive:#808000", "olivedrab:#6B8E23", "orange:#FFA500", "orangered:#FF4500", "orchid:#DA70D6", "palegoldenrod:#EEE8AA", "palegreen:#98FB98", "paleturquoise:#AFEEEE", "palevioletred:#DB7093", "papayawhip:#FFEFD5", "peachpuff:#FFDAB9", "peru:#CD853F", "pink:#FFC0CB", "plum:#DDA0DD", "powderblue:#B0E0E6", "purple:#800080", "red:#FF0000", "rosybrown:#BC8F8F", "royalblue:#4169E1", "saddlebrown:#8B4513", "salmon:#FA8072", "sandybrown:#F4A460", "seagreen:#2E8B57", "seashell:#FFF5EE", "sienna:#A0522D", "silver:#C0C0C0", "skyblue:#87CEEB", "slateblue:#6A5ACD", "slategray:#708090", "snow:#FFFAFA", "springgreen:#00FF7F", "steelblue:#4682B4", "tan:#D2B48C", "teal:#008080", "thistle:#D8BFD8", "tomato:#FF6347", "turquoise:#40E0D0", "violet:#EE82EE", "wheat:#F5DEB3", "white:#FFFFFF", "whitesmoke:#F5F5F5", "yellow:#FFFF00", "yellowgreen:#9ACD32");
+
+    var Textarea = document.getElementById("content");
+    var Radio = document.getElementsByName("R1");
+    var data = Radio[0].checked ? W3C: IE4;
+    var x = S != 0 ? 1 : 0;
+    var y = S != 0 ? 0 : 1;
+    var text = Textarea.value;
+    var text = "\n" + text + "\n";
+    for (var i = 0; i < data.length; i++) {
+        var STR = data[i].split(":");
+        var A = STR[x];
+        var B = STR[y];
+        text = text.replace(new RegExp("([^a-zA-Z0-9_\/\.])" + A + "([^a-zA-Z0-9_\/\.])", "ig"), "$1" + B + "$2");
+    }
+    Textarea.value = text.trim();
+     
+}
+</script>
+</body>
+</html>

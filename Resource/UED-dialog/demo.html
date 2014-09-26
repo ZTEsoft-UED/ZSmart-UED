@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title></title>
+    <meta  charset="utf-8" /> 
+	<script src="UED-dialog/jquery-1.8.2.min.js"></script>
+    <link href="UED-dialog/style.min.css" media="screen" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="UED-dialog/dialog.min.js"></script>
+
+	<script type="text/javascript">
+	$(function(){
+
+		dialog.alert('Hello World') 
+
+
+
+dialog.confirm('删除用户组后当前用户组的成员也会被清空',
+    function(data){if(data){alert('正在删除');}},
+    {
+        title: '删除用户组',
+        btn_name: '我知道后果,继续删除',
+        danger: true
+    }
+)
+    /*
+    dialog.alert('用户组删除失败',
+        function(){alert('您关闭了窗口')},
+        {
+            title: '操作失败',
+             btn_name: '我知道了'
+        }
+    )
+
+
+
+       */ /*		dialog.prompt('请输入新的组名',
+            function(data){if(data){alert('您刚刚输入了' + data);}},
+            {
+                title: '新建分组',
+                btn_name: '新建',
+                max_length: 30,
+                verify: [
+                    {
+                        tip: '您输入的存在非数字',
+                            condition: function(data){
+                                return /^\d+$/.test(data);
+                            }
+                    }
+                ]
+            }
+        )*/
+	})
+		
+	</script>
+</head>
+<body> 
+</body>
+</html>

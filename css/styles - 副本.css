@@ -1,0 +1,1071 @@
+body{
+	font: 16px/25px "Avenir LT W01 65 Medium", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		-webkit-text-size-adjust: 100%;
+		color: #66666a;
+}
+#container,
+header { 
+	width: 100%; 
+	margin: 0 auto;
+	background-color: #222228;
+}
+header {
+	position: fixed;
+	top: 0;
+	z-index:400;
+	height: 70px;
+}
+header .container{
+	max-width: none;
+}
+#logo{
+	margin:21px 0 23px 20px;
+	float: left;
+}
+#logo img{
+	float: left;
+}
+
+header { 
+	background-color: #222228;
+	overflow: hidden;
+	border-bottom:2px solid rgb(0, 0, 0);
+    border-bottom:2px solid rgba(0, 0, 0, .1);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+
+a{
+	color: #222228;
+}
+article a:hover{
+	border-bottom: 1px solid #ccc;
+}
+
+header nav {
+	float: right;
+	margin:21px 0 19px;
+}
+
+header nav li {
+	float: left;
+	margin: 0 25px 0 0;
+}
+header nav ul.right li {
+	margin: 0 15px 0 0;
+}
+header nav ul.right li:last-child{
+	margin-right: 0;
+}
+header nav a,
+header nav li{
+	font: 12px/32px "Avenir LT W01 85 Heavy", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	color: #99999a;
+}
+
+header nav a:hover,
+header nav a.selected{
+	color: #ffffff;
+
+}
+header nav a.selected{
+	border-bottom: 3px solid #02daaf;
+	padding-bottom: 23px;
+}
+header nav li:last-child{
+	margin-right: 0;
+}
+header nav .avatar {
+	height:32px;
+	width:32px;
+	display:block;
+}
+.avatar img {
+	border-radius: 3px;
+}
+header nav .left{
+	float: left;
+}
+header nav .right{
+	float: right;
+	margin-right:20px;
+	border-left:1px solid #36363c;
+	padding-left: 15px;
+	margin-left: 15px;
+}
+
+article{
+	padding-top: 70px;
+	min-height: 600px;
+}
+.wrapper {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	top: 0;
+	z-index: 20;
+}
+.row {
+	padding:0;
+	position: relative;
+	background-color: #fff;
+}
+.row.dark-grey{
+	background:#222228 url("../images/home_background.png") no-repeat center top;
+	background-size: 1400px 650px;
+}
+.row.grey{
+	background-color: #F2F5F7;
+}
+.overline{
+	border-top: 1px solid #dadddf;
+}
+.underline{
+	border-bottom: 1px solid #dadddf;
+}
+.content {
+	margin: 0 auto;
+    max-width:960px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 75px;
+}
+#companies .content{
+	padding-bottom: 45px;
+}
+.content.no-padding{
+	padding: 0;
+}
+.content h2 {
+	font-size:32px;
+	line-height:36px;
+	color: #333;
+	font-family: "Avenir", "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+	margin-bottom:20px;
+}
+.content p{
+	padding:0 120px;
+}
+
+
+/**	Home **/
+h1{
+	color: #fff;
+	font-size: 42px;
+	line-height: 40px;
+	margin-top: 110px;
+}
+h2{
+	font-size:30px;
+	line-height:30px;
+	margin-top:90px;
+}
+h3{
+	color: #99999A;
+    font-family: "Avenir LT W01 85 Heavy","HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top:60px;
+}
+
+#intro .button{
+	margin-top: 20px;
+	margin-bottom:110px;
+}
+.underhead {
+	font-size: 28px;	
+	line-height:40px;
+	margin-top: 20px;
+}
+.img.sample {
+	display: block;
+	width: 100%;
+	height: 575px;
+	background:url('../images/home_page_image.png') no-repeat;
+	background-size:contain;
+}
+.row#results{
+	padding-bottom:50px;
+}
+
+
+
+
+/**	How it works **/
+#how .content{
+	max-width:1260px;
+	padding-bottom: 0;
+	padding-top:130px;
+	position: relative;
+}
+#how .content.overview{
+	max-width:960px;
+	padding-top: 60px;
+}
+#how .first .content {
+	padding-top:90px;
+}
+#how .content .description{
+	position: absolute;
+}
+#how .screen{
+	display: block;
+	margin: 0 auto;
+}
+
+/* Jobs */
+#jobs_matches .how_tip_left{
+	background:url('../images/how/how_1_tip_left_1.png') no-repeat;
+	left:58px;
+	top:464px;
+	width: 123px;
+	height: 86px;
+}
+#jobs_matches .how_tip_right{
+	background:url('../images/how/how_1_tip_right_1.png') no-repeat;
+	right:48px;
+	top:362px;
+	width:132px;
+	height: 84px;
+}
+#jobs_matches .screen{
+	background:url('../images/how/how_results.png') no-repeat;
+	width: 1004px;
+	height:750px;
+}
+/* Profiles */
+#profiles .how_tip_left{
+	background:url('../images/how/how_2_tip_left_1.png') no-repeat;
+	left:51px;
+	top:520px;
+	width: 130px;
+	height: 86px;
+}
+#profiles .how_tip_right{
+	background:url('../images/how/how_2_tip_right_1.png') no-repeat;
+	right:50px;
+	top:330px;
+	width: 131px;
+	height: 86px;
+}
+#profiles .how_tip_right_2{
+	background:url('../images/how/how_2_tip_right_2.png') no-repeat;
+	right:60px;
+	top:1150px;
+	width: 122px;
+	height: 84px;
+}
+
+
+#profiles .screen{
+	background:url('../images/how/how_profile.png') no-repeat;
+	width: 1004px;
+	height: 1352px;
+}
+
+#faves .screen{
+	background:url('../images/how/how_favs.png') no-repeat;
+	width: 1004px;
+	height: 675px;
+}
+#faves .how_tip_left{
+	background:url('../images/how/how_3_tip_left_1.png') no-repeat;
+	left:62px;
+	top:434px;
+	width: 119px;
+	height: 86px;
+}
+#faves .how_tip_right{
+	background:url('../images/how/how_3_tip_right_1.png') no-repeat;
+	right:57px;
+	top:538px;
+	width: 123px;
+	height: 86px;
+}
+#job_list .screen{
+	background:url('../images/how/how_jobs.png') no-repeat;
+	width: 1004px;
+	height: 675px;
+}
+#job_list .how_tip_left{
+	background:url('../images/how/how_4_tip_left_1.png') no-repeat;
+	left:72px;
+	top:435px;
+	width: 109px;
+	height: 89px;
+}
+#job_list .how_tip_right{
+	background:url('../images/how/how_4_tip_right_1.png') no-repeat;
+	right:60px;
+	top:538px;
+	width: 121px;
+	height: 84px;
+}
+
+#job .screen{
+	background:url('../images/how/how_job.png') no-repeat;
+	width: 1004px;
+	height: 1088px;
+}
+#job .how_tip_left{
+	background:url('../images/how/how_5_tip_left_1.png') no-repeat;
+	left:65px;
+	top:460px;
+	width: 116px;
+	height: 86px;
+}
+#job .how_tip_right{
+	background:url('../images/how/how_5_tip_right_1.png') no-repeat;
+	right:70px;
+	top:340px;
+	width: 111px;
+	height: 84px;
+}
+#job .how_tip_right_2{
+	background:url('../images/how/how_5_tip_right_2.png') no-repeat;
+	right:64px;
+	top:1060px;
+	width: 117px;
+	height: 84px;
+}
+
+#how h3 {
+	margin: 0 0 15px 0;
+	color: #22222f;
+}
+
+#how-intro .content,
+#faq .content{
+	padding-bottom: 90px;
+	padding-top: 0;
+	max-width: 960px;
+}
+#how-intro .content p{
+	padding: 0 120px;
+}
+
+
+#how .row.last {
+	overflow: hidden;
+}
+#how .last .content.overview{
+	margin-bottom: 130px;
+}
+
+
+
+/* Talent */
+#talent .cols li {
+	float: left;
+	width: 465px;
+	display: block;
+	overflow: hidden;
+	background-color: #fff;
+	margin:0 0 30px 15px;
+	padding-bottom: 30px;
+}
+#talent .cols li p{
+	padding: 0;
+}
+#talent .cols li img {
+	width:100%;
+	height: auto;
+	vertical-align: bottom;
+}
+#talent .cols li:nth-child(odd){
+	margin:0 15px 30px 0;
+}
+#talent .row.first {
+	padding-top: 90px;
+}
+#talent .image{
+	display: block;
+	width: 465px;
+	height: 350px;
+}
+#talent .exmp1 .image{
+	background:transparent url('../images/talent/01.jpg') no-repeat center top;
+}
+#talent h3 {
+	margin-top: 30px;
+	margin-bottom: 0;
+	font: 16px/25px "Avenir LT W01 65 Medium","HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+	text-transform: none;
+	color:#222228;
+}
+#talent p.light {
+	color:#99999a;
+}
+
+
+/* Buttons */
+article button,
+article .button {
+	border-radius:4px; 
+	-moz-border-radius:4px; 
+	-webkit-border-radius:4px;
+	background-color: #02daaf;
+	color: #fff;
+	padding:16px 10px;
+	display:block;
+	border: none;
+	font: 12px/18px "Avenir LT W01 85 Heavy", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	min-width:180px;
+	cursor: pointer;
+	text-align: center;
+	width: 140px;
+	margin: 0 auto;
+}
+article .button:hover,
+article button:hover,
+article .button:active,
+article button:active,
+article .button:focus,
+article button:focus
+{
+	background-color:#0bba98;
+	border-bottom: none;
+}
+
+article button.outline,
+article .button.outline{
+	padding:15px 10px;
+	background-color:#fff;
+	border:#e6e9ea 1px solid;
+	color: #66666a;
+}
+
+article button.outline:hover,
+article .button.outline:hover{
+	background-color:#f2f5f7;
+}
+
+article button.margin,
+article .button.margin{
+	margin-top:30px;
+}
+
+.inline-block,
+.inline-block button.margin,
+.inline-block .button.margin {
+	display: inline-block;
+}
+.inline-block button.margin,
+.inline-block .button.margin{
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+
+
+footer.row{
+	background-color: #222228;
+	padding-top: 90px;
+}
+footer ul {
+	margin-bottom: 150px;
+}
+footer.row li {
+	display: inline-block;
+}
+footer.row a,
+footer .small {
+	font: 12px/18px "Avenir LT W01 85 Heavy", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	color: #aaa;
+	padding: 0 0 0 35px;
+}
+footer .small,
+footer .small a{
+	color: #44444a;
+	padding: 0;
+}
+footer.row a:hover{
+	color: #fff;
+}
+footer.row .email{
+	margin-right: 20px;
+}
+footer.row .twitter{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+footer.row .email a {
+	background:transparent url('../images/paperplane.svg') no-repeat center left;
+}
+footer.row .twitter a {
+	background:transparent url('../images/twitter-grey.svg') no-repeat center left;
+}
+footer.row .blog a {
+    background: url("../images/blog.svg") no-repeat scroll left center transparent;
+    margin-left: 20px;
+}
+
+
+/**	How it works **/
+
+@media all and (max-width: 1280px) {
+	
+	#how .content{
+		max-width:960px;
+	}
+	#how .content.overview,
+	#how-intro .content{
+		max-width: 720px;
+	}
+	#how .content p,
+	#how-intro .content p{
+		padding: 0;
+	}
+	#how .screen{ 
+		width: 755px; /* All screens same width */
+	}
+	/* Screens... */
+	#jobs_matches .screen{
+		background:url('../images/how/how_results.png') no-repeat;
+		background-size:755px 564px;
+		height: 564px;
+	}
+	#profiles .screen{
+		background:url('../images/how/how_profile.png') no-repeat;
+		background-size:755px 1017px;
+		height: 1017px;
+	}
+	#faves .screen{
+		background:url('../images/how/how_favs.png') no-repeat;
+		background-size:755px 509px;
+		height:509px;
+	}
+	#job_list .screen{
+		background:url('../images/how/how_jobs.png') no-repeat;
+		background-size:755px 509px;
+		height:509px;
+	}
+	#job .screen{
+		background:url('../images/how/how_job.png') no-repeat;
+		background-size:755px 818px;
+		height:818px;
+	}
+
+
+	#jobs_matches .how_tip_left{
+		left: 27px;
+		top: 370px;
+	}
+	#jobs_matches .how_tip_right{
+		right: 18px;
+		top:292px;
+	}
+	#profiles .how_tip_left{
+		left: 21px;
+		top:420px;
+	}
+	#profiles .how_tip_right{
+		right: 20px;
+		top:280px;
+	}
+	#profiles .how_tip_right_2{
+		top:900px;
+		right: 30px;
+	}
+	#faves .how_tip_left{
+		left: 32px;
+		top:354px;
+	}
+	#faves .how_tip_right{
+		right:27px;
+		top:435px;
+	}
+	#job_list .how_tip_left{
+		left: 42px;
+		top:354px;
+	}
+	#job_list .how_tip_right{
+		right: 30px;
+		top:435px;
+	}
+	#job .how_tip_left{
+		left: 35px;
+		top:374px;
+	}
+	#job .how_tip_right{
+		right: 40px;
+		top:280px;
+	}
+	#job .how_tip_right_2{
+		top:821px;
+		right: 34px;
+	}
+}
+
+
+
+@media all and (max-width: 999px) and (min-width: 768px) {
+
+	header nav ul.right li:last-child{
+		display: none;
+	}
+	header nav li{
+		margin-right: 15px;
+	}
+	header nav ul.right li{
+		margin-right: 0;
+	}
+	.content {
+		max-width:720px;
+	}
+	
+	
+	.img.sample{
+		height: 431px;
+	}
+	h1{
+		line-height:56px;
+	}
+	#how .content .description {
+		display: none;
+	}
+	#talent .cols li{
+		width: 345px;
+	}
+	#talent .exmp1 .image{
+		background-size:contain;
+		width: 345px;
+		height: 260px;
+	}
+	.content p{
+		padding: 0;
+	}
+
+}
+
+
+@media all and (max-width: 767px) {
+	
+	body{
+		padding-top: 0;
+	}
+
+	body, html{
+		height: auto;
+	}
+
+	#logo{
+		margin-left:15px;
+	}
+	header{
+		position:static;
+		background-clip:border-box;
+	}
+	
+	article{
+		padding: 0;
+		min-height: 0;
+
+	}
+	header nav .right{
+		margin-left: 0;
+		padding-left: 0;
+		border-left: 0;
+	}
+	header .container{
+		min-height: 65px;
+		height: auto;
+	}
+	header nav {
+		margin: 0;
+		width: 100%;
+		display: none;
+		top:70px;
+		position: absolute;
+		z-index:500;
+		box-shadow: 
+	}
+	header nav a{
+		z-index:600;
+	}
+	header nav.open{
+		display:block;
+	}
+	header nav ul{
+		overflow: hidden;
+
+	}
+	header nav ul.right li:last-child{
+		display: none;
+	}
+	header nav ul.right .sign{
+		border-bottom:2px solid rgb(0, 0, 0);
+	    border-bottom:2px solid rgba(0, 0, 0, .1);
+	    -webkit-background-clip: padding-box; /* for Safari */
+	    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+	    padding-bottom: 10px;
+	}
+
+	header nav li{
+		float: left;
+		clear: left;
+		width: 100%;
+		background-color: #222228;
+		border-top: 1px solid #333338;
+	}
+	header nav li a{
+		width: 100%;
+		display: block;
+		font-size:12px;
+		line-height: 60px;
+		text-indent: 30px;
+		color: #999;
+		text-transform:uppercase;
+	}
+	header nav a.selected{
+		border-bottom:none;
+		padding-bottom: 0;
+	}
+	header nav a:hover, header nav a.selected{
+		color: #fff;
+	}
+	header nav .right,
+	header nav .left {
+		float: none;
+		margin-right: 0;
+	}
+	header nav .avatar{
+		display: none;
+	}
+	button.toggle-nav{
+		background-color: #222228;
+		width:30px;
+		height:30px;
+		min-width:0;
+		padding: 0;
+		margin:20px 15px 0 0;
+		background:#222228 url("../images/icon_menu.svg") no-repeat center center;
+		float: right;
+		opacity: 0.5;
+	}
+	button.toggle-nav.open{
+		opacity:1;
+	}
+	header .container{
+		margin: 0;
+		height:70px;
+		background-color:#222228;
+	}
+	.content {
+		max-width:none;
+		width: 100%;
+		padding-bottom: 65px;
+	}
+	#companies .content {
+		padding-bottom:55px;
+	}
+	.content p{
+		padding: 0;
+	}
+	.content p{
+		margin-left:35px;
+		margin-right:35px;
+	}
+	h3{
+		margin-top:30px;
+		margin-bottom: 20px;
+	}
+	.img.sample{
+		background:url('../images/home_page_mobile_image.png') no-repeat center top;
+		background-size:230px 405px;
+		height:405px;
+	}
+	.row.grey{
+		background-color:#E5E5E8;
+	}
+	#companies.row.grey{
+		background-color:#F2F5F7;
+	}
+	.row.dark-grey{
+		background-image: none;
+	}
+	h1{
+		font-size: 22px;
+    	line-height:34px;
+    	margin: 55px 15px 0 15px;
+	}
+	.underhead {
+		font-size:18px;
+		line-height:24px;
+	}
+	a.small{
+		margin-bottom:60px;
+	}
+	.content h2{
+		font-size: 22px;
+		line-height: 28px;
+		margin-top:65px;
+	}
+	#candidates .content h2{
+		margin-top:45px;
+	}
+	#intro .button{
+		margin-bottom:70px;
+		margin-top: 35px;
+	}
+	footer .content{
+		margin: 0 30px;
+		width: auto;
+	}
+	footer.row{
+		padding: 0;
+	}
+	footer .container{
+		overflow: hidden;
+		padding: 20px 0;
+	}
+	footer ul {
+		margin: 0;
+	}
+	footer.row li{
+		display:block;
+		font-family:"Avenir LT W01 85 Heavy","HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+	}
+	footer.row a {
+		font-size: 12px;
+		line-height: 40px;
+		color:#66666A;
+		padding: 0 0 0 30px;
+	}
+	li.copyright {
+	    color: #44444A;
+	    font-size: 9px;
+	    line-height: 15px;
+	    margin: 60px 0 40px 30px;
+	    text-transform: uppercase;
+	}
+	#how .content .description {
+		display: none;
+	}
+	
+	#jobs_matches .screen,
+	#profiles .screen,
+	#faves .screen,
+	#job_list .screen,
+	#job .screen{
+		/*background:url('../images/how/example_image_mob.png') no-repeat;*/
+		background-size:cover;
+		width: 280px;
+		height: 492px;
+	}
+	#jobs_matches .screen{
+		background:url('../images/how/how_match_mobile.png') no-repeat;
+	}
+	#profiles .screen{
+		background:url('../images/how/how_profile_mobile.png') no-repeat;
+	}
+	#faves .screen{
+		background:url('../images/how/how_favs_mobile.png') no-repeat;
+	}
+	#job_list .screen{
+		background:url('../images/how/how_jobs_mobile.png') no-repeat;
+	}
+	#job .screen{
+		background:url('../images/how/how_job_mobile.png') no-repeat;
+	}
+
+
+
+	#how .content h2,
+	#faq .content h2{
+		margin-top: 40px;
+	}
+	#how #how-intro .content,
+	#faq .content{
+		padding-bottom: 65px;
+		padding-top: 0;
+	}
+	#how .first .content{
+		padding-top: 50px;
+	}
+	#how .content.overview{
+		padding-top: 30px;
+	}
+	#how .content{
+		padding-top: 60px;
+	}
+	#talent .cols {
+		margin:0 20px 0 20px;
+	}
+	#talent .cols li,
+	#talent .cols li:nth-child(odd){
+		float: none;
+		clear: left;
+		margin: 0 auto 30px auto;
+		width: 100%;
+		max-width: 465px;
+	}
+	#talent .image{
+		width: 100%;
+		max-width: 465px;
+
+	}
+	#talent .exmp1 .image{
+		background-size: contain;
+	}
+	#talent .item img {
+		width: 100%;
+	}
+	#talent .content h2{
+		margin-top: 40px;
+	}
+	#how-intro .content{
+		padding-bottom: 65px;
+	}
+	#talent .row.first{
+		padding-top: 50px;
+	}
+}
+
+/* Retina-specific stuff here - All */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and ( min--moz-device-pixel-ratio: 2), only screen and ( -o-min-device-pixel-ratio: 2/1), only screen and ( min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx) { 
+
+		.img.sample {
+			background:url('../images/home_page_image@2x.png') no-repeat;
+			background-size:contain;
+		}
+		.row.dark-grey{
+			background:#222228 url("../images/home_background@2x.png") no-repeat center top;
+			background-size: 1400px 650px;
+		}
+
+		/* Jobs */
+		#jobs_matches .how_tip_left{
+			background:url('../images/how/how_1_tip_left_1@2x.png') no-repeat;
+			background-size:cover;
+		}
+		#jobs_matches .how_tip_right{
+			background:url('../images/how/how_1_tip_right_1@2x.png') no-repeat;
+			background-size:cover;
+		}
+		
+		/* Profiles */
+		#profiles .how_tip_left{
+			background:url('../images/how/how_2_tip_left_1@2x.png') no-repeat;
+			background-size:cover;
+		}
+		#profiles .how_tip_right{
+			background:url('../images/how/how_2_tip_right_1@2x.png') no-repeat;
+			background-size:cover;
+		}
+		#profiles .how_tip_right_2{
+			background:url('../images/how/how_2_tip_right_2@2x.png') no-repeat;
+			background-size:cover;
+		}
+		/* Faves */
+		#faves .how_tip_left{
+			background:url('../images/how/how_3_tip_left_1@2x.png') no-repeat;
+			background-size:cover;
+		}
+		#faves .how_tip_right{
+			background:url('../images/how/how_3_tip_right_1@2x.png') no-repeat;
+			background-size:cover;
+		}
+		/* Job list */
+		#job_list .how_tip_left{
+			background:url('../images/how/how_4_tip_left_1@2x.png') no-repeat;
+			background-size:cover;
+		}
+		#job_list .how_tip_right{
+			background:url('../images/how/how_4_tip_right_1@2x.png') no-repeat;
+			background-size:cover;
+		}
+		/* Job list */
+		#job .how_tip_left{
+			background:url('../images/how/how_5_tip_left_1@2x.png') no-repeat;
+			background-size:cover;
+		}
+		#job .how_tip_right{
+			background:url('../images/how/how_5_tip_right_1@2x.png') no-repeat;
+			background-size:cover;
+		}
+		#job .how_tip_right_2{
+			background:url('../images/how/how_5_tip_right_2@2x.png') no-repeat;
+			background-size:cover;
+		}
+
+		/* Screens... */
+		#jobs_matches .screen{
+			background:url('../images/how/how_results@2x.png') no-repeat;
+			background-size:cover;
+		}
+		#profiles .screen{
+			background:url('../images/how/how_profile@2x.png') no-repeat;
+			background-size:cover;
+		}
+		#faves .screen{
+			background:url('../images/how/how_favs@2x.png') no-repeat;
+			background-size:cover;
+		}
+		#job_list .screen{
+			background:url('../images/how/how_jobs@2x.png') no-repeat;
+			background-size:cover;
+		}
+		#job .screen{
+			background:url('../images/how/how_job@2x.png') no-repeat;
+			background-size:cover;
+		}
+
+}
+
+
+/* Retina-specific stuff here - 767 */
+@media 	only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), only screen and (   min--moz-device-pixel-ratio: 2) and (max-width: 767px), 	only screen and (     -o-min-device-pixel-ratio: 2/1)    and (max-width: 767px), only screen and ( min-device-pixel-ratio: 2)      and (max-width: 767px), 	only screen and ( min-resolution: 192dpi) and (max-width: 767px), only screen and ( min-resolution: 2dppx)  and (max-width: 767px) { 
+
+		.img.sample {
+			background:url('../images/home_page_mobile_image@2x.png') no-repeat center top;
+			background-size:contain;
+			height:405px;
+		}
+		/* Screens... */
+		/*#jobs_matches .screen{
+			background:url('../images/how/example_image_mob@2x.png') no-repeat;
+			background-size:cover;
+		}
+		#profiles .screen{
+			background:url('../images/how/example_image_mob@2x.png') no-repeat;
+			background-size:cover;
+		}
+		#faves .screen{
+			background:url('../images/how/example_image_mob@2x.png') no-repeat;
+			background-size:cover;
+		}
+		#job_list .screen{
+			background:url('../images/how/example_image_mob@2x.png') no-repeat;
+			background-size:cover;
+		}
+		#job .screen{
+			background:url('../images/how/example_image_mob@2x.png') no-repeat;
+			background-size:cover;
+		}*/
+
+		#jobs_matches .screen{
+			background:url('../images/how/how_match_mobile@2x.png') no-repeat;
+			background-size:cover;
+		}
+		#profiles .screen{
+			background:url('../images/how/how_profile_mobile@2x.png') no-repeat;
+			background-size:cover;
+		}
+		#faves .screen{
+			background:url('../images/how/how_favs_mobile@2x.png') no-repeat;
+			background-size:cover;
+		}
+		#job_list .screen{
+			background:url('../images/how/how_jobs_mobile@2x.png') no-repeat;
+			background-size:cover;
+		}
+		#job .screen{
+			background:url('../images/how/how_job_mobile@2x.png') no-repeat;
+			background-size:cover;
+		}
+
+}
